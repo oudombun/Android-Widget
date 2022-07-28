@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-nodpi/bg_fill_white_small_radius.xml" value="0.119" />
+        <entry key="app/src/main/res/drawable-nodpi/rounded_fallback.xml" value="0.119" />
+        <entry key="app/src/main/res/drawable/gradient.xml" value="0.119" />
+        <entry key="app/src/main/res/drawable/round_dialog.xml" value="0.119" />
+        <entry key="app/src/main/res/drawable/rounded.xml" value="0.119" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.32083333333333336" />
+        <entry key="app/src/main/res/layout/dialog_outlet.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/qr_widget.xml" value="0.32083333333333336" />
+        <entry key="app/src/main/res/layout/qr_widget_configure.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/widget_q_r.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/widget_q_r_fallback.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/widget_q_r_login.xml" value="0.32083333333333336" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

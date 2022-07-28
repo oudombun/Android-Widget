@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--~
+  ~ Copyright (c) SkyBooking Co,. Ltd
+  ~ Skybooking Tenant
+  ~ Created by Monyoudom on  29/12/2021.
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+   android:shape="rectangle">
+   <solid android:color="@color/white" />
+   <corners android:radius="4dp" />
+</shape>
