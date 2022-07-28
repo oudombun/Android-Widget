@@ -132,7 +132,7 @@ class BottomSheetDialog :BottomSheetDialogFragment(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setStyle(DialogFragment.STYLE_NO_FRAME,0)
+        setStyle(DialogFragment.STYLE_NO_FRAME,0)
 
     }
 
