@@ -10,6 +10,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WidgetTesting">
         <receiver
+            android:name=".widget.PaymentWidget"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/payment_widget_info" />
+        </receiver>
+
+        <activity
+            android:name=".widget.PaymentWidgetConfigureActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <receiver
             android:name=".QrWidget"
             android:exported="true">
             <intent-filter>
@@ -22,9 +42,9 @@
         </receiver>
 
         <activity
-            android:theme="@style/Theme.AppCompat.Translucent"
             android:name=".QrWidgetConfigureActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Translucent">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
             </intent-filter>

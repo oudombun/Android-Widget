@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:configure="com.oudombun.widgettesting.widget.PaymentWidgetConfigureActivity"
+    android:description="@string/app_widget_description"
+    android:initialKeyguardLayout="@layout/payment_widget"
+    android:initialLayout="@layout/payment_widget"
+    android:minWidth="250dp"
+    android:previewImage="@drawable/example_appwidget_preview"
+    android:previewLayout="@layout/payment_widget"
+    android:targetCellWidth="4"
+    android:targetCellHeight="2"
+    android:minHeight="100dp"
+    android:resizeMode="horizontal|vertical"
+    android:updatePeriodMillis="86400000"
+    android:widgetCategory="home_screen" />

@@ -1,0 +1,152 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="#A9CB37">
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="125dp"
+            android:layout_height="145dp"
+            android:background="@drawable/khqr_bg"
+            android:orientation="vertical"
+            android:paddingStart="15dp"
+            android:paddingTop="50dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="15dp">
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_weight="1"
+            android:gravity="end"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/accountText"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:text="Current Account: *** ***782"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/accountText"
+                android:id="@+id/accountBalance"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:text="$0.00"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:paddingStart="10dp"
+
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:gravity="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:textSize="12sp"
+                    android:background="@drawable/bg_round"
+                    android:textColor="@color/white"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:layout_height="30dp">
+                    <LinearLayout
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_marginEnd="5dp"
+                            android:src="@drawable/baseline_qr_code_scanner_16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:text="SCAN"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:textSize="12sp"
+                    android:background="@drawable/bg_round"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="2dp"
+                    android:layout_weight="1"
+                    android:layout_height="30dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:src="@drawable/baseline_share_16" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SHARE"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:gravity="center_vertical"
+        android:layout_height="25dp">
+        <ImageView
+            android:src="@drawable/cnb_logo_full_red"
+            android:layout_width="60dp"
+            android:layout_height="18dp"
+            android:text="Left Text"
+            android:gravity="start" />
+
+        <LinearLayout
+            android:layout_marginEnd="2dp"
+            android:gravity="end|center_vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginEnd="2dp"
+                android:src="@drawable/baseline_rotate_left_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:textSize="7sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Updated: 05-10-2023 | 01:28:11 PM"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
