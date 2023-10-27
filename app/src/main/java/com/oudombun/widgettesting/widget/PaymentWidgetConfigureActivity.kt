@@ -1,19 +1,26 @@
 package com.oudombun.widgettesting.widget
 
 import android.app.Activity
+import android.app.Dialog
 import android.appwidget.AppWidgetManager
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.oudombun.widgettesting.R
 import com.oudombun.widgettesting.databinding.PaymentWidgetConfigureBinding
+
 
 /**
  * The configuration screen for the [PaymentWidget] AppWidget.
  */
-class PaymentWidgetConfigureActivity : Activity() {
+class PaymentWidgetConfigureActivity : AppCompatActivity() {
     private var appWidgetId = AppWidgetManager.INVALID_APPWIDGET_ID
     private lateinit var appWidgetText: EditText
     private var onClickListener = View.OnClickListener {
@@ -45,8 +52,8 @@ class PaymentWidgetConfigureActivity : Activity() {
         binding = PaymentWidgetConfigureBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        appWidgetText = binding.appwidgetText as EditText
-        binding.addButton.setOnClickListener(onClickListener)
+//        appWidgetText = binding.appwidgetText as EditText
+//        binding.addButton.setOnClickListener(onClickListener)
 
         // Find the widget id from the intent.
         val intent = intent
@@ -63,7 +70,10 @@ class PaymentWidgetConfigureActivity : Activity() {
             return
         }
 
-        appWidgetText.setText(loadTitlePref(this@PaymentWidgetConfigureActivity, appWidgetId))
+        val bottomSheetFragment = BottomSheetFragment()
+        bottomSheetFragment.show(supportFragmentManager, bottomSheetFragment.tag)
+
+//        appWidgetText.setText(loadTitlePref(this@PaymentWidgetConfigureActivity, appWidgetId))
     }
 
 }
@@ -90,4 +100,16 @@ internal fun deleteTitlePref(context: Context, appWidgetId: Int) {
     val prefs = context.getSharedPreferences(PREFS_NAME, 0).edit()
     prefs.remove(PREF_PREFIX_KEY + appWidgetId)
     prefs.apply()
+}
+
+class BottomSheetFragment : BottomSheetDialogFragment() {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        return inflater.inflate(R.layout.bottom_sheet_layout, container, false)
+    }
+
+
+
+
+
+    // Add any other functionality or interactions here
 }

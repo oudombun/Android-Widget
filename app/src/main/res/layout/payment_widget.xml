@@ -137,16 +137,11 @@
             android:orientation="horizontal"
             android:layout_height="wrap_content">
             <ImageView
-                android:layout_marginEnd="2dp"
-                android:src="@drawable/baseline_rotate_left_16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:textSize="7sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Updated: 05-10-2023 | 01:28:11 PM"
-                />
+                android:src="@drawable/cnb_logo_full_red"
+                android:layout_width="60dp"
+                android:layout_height="18dp"
+                android:text="Left Text"
+                android:gravity="start" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

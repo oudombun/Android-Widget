@@ -132,7 +132,7 @@ class BottomSheetDialog :BottomSheetDialogFragment(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setStyle(DialogFragment.STYLE_NO_FRAME,0)
+        setStyle(DialogFragment.STYLE_NO_FRAME, R.style.AppBottomSheetDialogTheme)
 
     }
 
@@ -146,6 +146,9 @@ class BottomSheetDialog :BottomSheetDialogFragment(){
         super.onViewCreated(view, savedInstanceState)
         dialog?.setCanceledOnTouchOutside(true)
 
+        // Make the status bar transparent
+        val window = dialog?.window
+        window?.statusBarColor = Color.TRANSPARENT
 
         val group = view.findViewById<RadioGroup>(R.id.rg_sort)
         val rprms: RadioGroup.LayoutParams =
@@ -218,10 +221,22 @@ internal fun deleteTitlePref(context: Context, appWidgetId: Int) {
 
 internal fun getOutlet(context: Context): MutableList<RadioButton> {
     val radioList = mutableListOf<RadioButton>()
+    // Adjust this padding value as needed
+    val paddingInDp = 8 // Adjust the padding value as needed
+    val density = context.resources.displayMetrics.density
+    val paddingInPx = (paddingInDp * density).toInt()
+
+    // Create and add a header view to the RadioGroup
+    val radioGroup = RadioGroup(context)
+    val headerView = View.inflate(context, R.layout.header_layout, null) // Inflate your header layout
+    headerView.setPadding(0, paddingInPx, 0, paddingInPx) // Set padding for line height
+    radioGroup.addView(headerView)
+
     for (i in 0..2) {
         val radioButton = RadioButton(context)
         radioButton.text = "Outlet ${i+1}"
         radioButton.id = View.generateViewId()
+        radioButton.setPadding(0, paddingInPx, 0, paddingInPx) // Set padding for line height
         radioButton.setTextColor(ContextCompat.getColorStateList(context, R.color.black));
         val colorStateList = ColorStateList(
             arrayOf(

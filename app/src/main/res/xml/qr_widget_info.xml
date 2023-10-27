@@ -2,6 +2,7 @@
 <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
     android:configure="com.oudombun.widgettesting.QrWidgetConfigureActivity"
     android:description="@string/app_widget_description"
+    android:widgetFeatures="reconfigurable|configuration_optional"
     android:initialKeyguardLayout="@layout/widget_q_r_fallback"
     android:initialLayout="@layout/widget_q_r_fallback"
     android:minWidth="180dp"

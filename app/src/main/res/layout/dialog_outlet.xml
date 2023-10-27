@@ -1,29 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp"
+<!--<LinearLayout android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:orientation="vertical"-->
+<!--    android:padding="16dp"-->
+<!--    android:background="@drawable/round_dialog"-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+
+<!--   <TextView-->
+<!--       android:id="@+id/textView"-->
+<!--       android:textColor="@color/black"-->
+<!--       android:background="@color/white"-->
+<!--       android:layout_width="match_parent"-->
+<!--       android:layout_height="wrap_content"-->
+<!--       android:text="Choose Outlet" />-->
+
+
+<!--   <RadioGroup-->
+<!--       android:textColor="@color/black"-->
+<!--       android:background="@color/white"-->
+<!--       android:padding="10dp"-->
+<!--       android:id="@+id/rg_sort"-->
+<!--       android:layout_width="match_parent"-->
+<!--       android:layout_height="wrap_content">-->
+<!--   </RadioGroup>-->
+
+<!--</LinearLayout>-->
+<LinearLayout
+    android:padding="10dp"
     android:background="@drawable/round_dialog"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:theme="@style/Theme.AppCompat.Translucent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
+   <!-- Small border at the top center -->
+   <View
+       android:layout_width="40dp"
+       android:layout_height="4dp"
+       android:background="#cccccc"
+       android:layout_gravity="center_horizontal" />
 
-   <TextView
-       android:id="@+id/textView"
-       android:textColor="@color/black"
-       android:background="@color/white"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:text="Choose Outlet" />
-
-
-   <RadioGroup
-       android:textColor="@color/black"
-       android:background="@color/white"
-       android:padding="10dp"
-       android:id="@+id/rg_sort"
+   <LinearLayout
+       android:layout_margin="10dp"
+       android:orientation="vertical"
        android:layout_width="match_parent"
        android:layout_height="wrap_content">
-   </RadioGroup>
-
+      <!-- Content of the bottom sheet -->
+      <TextView
+          android:textColor="@color/black"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+          android:text="Choose Outlet" />
+         <RadioGroup
+             android:layout_marginTop="10dp"
+             android:background="@drawable/round_dialog_inside"
+             android:id="@+id/rg_sort"
+             android:padding="10dp"
+             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+            <RadioButton
+                android:textColor="@color/black"
+                android:text="All Outlet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+         </RadioGroup>
+   </LinearLayout>
 </LinearLayout>
